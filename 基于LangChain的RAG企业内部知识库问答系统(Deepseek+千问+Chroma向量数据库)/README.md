@@ -188,6 +188,14 @@ docker-compose ps
 | zhangsan | 123456 | 普通用户 |
 | lisi | 123456 | 普通用户 |
 
+## 项目截图
+
+### 智能问答
+![智能问答](docs/images/智能对话.png)
+
+### 文档管理
+![文档管理](docs/images/文档管理.png)
+
 ## 功能模块
 
 ### 普通用户
