@@ -17,12 +17,12 @@
 ### 智能问答
 基于 RAG 技术从企业知识库中检索相关内容，由大模型生成准确答案。
 
-![智能问答](docs/images/智能对话.png)
+![智能问答](docs/images/duihua.png)
 
 ### 文档管理
 支持上传 TXT、PDF、DOCX 文档，自动解析切片并写入 Chroma 向量数据库。
 
-![文档管理](docs/images/文档管理.png)
+![文档管理](docs/images/wendang.png)
 
 ## 技术栈
 
