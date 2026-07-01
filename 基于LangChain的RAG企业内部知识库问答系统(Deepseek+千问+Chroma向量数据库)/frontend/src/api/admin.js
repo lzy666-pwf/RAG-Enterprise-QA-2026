@@ -73,3 +73,12 @@ export function getVectorStatus() {
 export function clearVectorStore() {
   return request.post('/admin/vectors/clear')
 }
+
+/**
+ * 删除文档（管理员）
+ * @param {Number} docId - 文档ID
+ * @returns {Promise} 返回删除结果
+ */
+export function deleteDocument(docId) {
+  return request.delete(`/admin/documents/${docId}`)
+}
