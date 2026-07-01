@@ -1,0 +1,30 @@
+# MySQL 8.0 数据库服务配置
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: enterprise_qa_mysql
+    restart: always
+    environment:
+      # MySQL root密码
+      MYSQL_ROOT_PASSWORD: 123456
+      # 创建数据库
+      MYSQL_DATABASE: db_enterprise_qa
+    ports:
+      # 映射到宿主机的3308端口
+      - "3308:3306"
+    volumes:
+      # 初始化SQL脚本
+      - ./migrations/init_database.sql:/docker-entrypoint-initdb.d/init.sql
+      # 数据持久化目录
+      - mysql_data:/var/lib/mysql
+    command:
+      # MySQL 8.0 配置参数
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+
+volumes:
+  mysql_data:
+    driver: local
